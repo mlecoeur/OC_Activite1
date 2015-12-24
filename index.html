@@ -7,6 +7,10 @@
 body {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.page{
+	width:350px;
+	margin:0px auto;
+}
 .customcheckbox {
 	display: inline-block;
 	position: relative;
@@ -71,22 +75,19 @@ body {
 	background-position: 0px -40px;
 }
 .customsubmit {
-	display: inline-block;
+	display: block;
 	position: relative;
 	top: 0px;
 	left: 0px;
 	overflow-x: hidden;
 	overflow-y: hidden;
+	text-align:center;
 }
 .customsubmit input[type=submit] {
 	margin: 5px;
 	padding: 10px;
 	border-radius: 5px;
 	border: 1px solid #B4B3B3;
-	display: block;
-	position: relative;
-	top: 0px;
-	left: 0px;
 	color: #4BAE6B;
 	font-weight: bold;
 	font-size:16px;
@@ -102,7 +103,7 @@ body {
 </head>
 
 <body>
-<p>Quelles pommes préférez-vous ?</p>
+<div class="page"><p>Quelles pommes préférez-vous ?</p>
 <form action="#" method="get"><div class="customcheckbox"><input type="checkbox" name="couleur" value="rouges" id="checkbox">
 <span><label for="checkbox">rouges </label></span></div>
 <div class="customcheckbox"><input type="checkbox" name="couleur" value="vertes" id="checkbox1">
@@ -112,6 +113,6 @@ body {
 <div class="customsubmit">
   <input type="submit">
 </div>
-</form>
+</form></div>
 </body>
 </html>
