@@ -5,17 +5,82 @@
 <title>Document sans nom</title>
 <style type="text/css">
 body {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+.customcheckbox {
+	display: inline-block;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+.customcheckbox input[type=checkbox] {
+	position: absolute;
+	top: 0px;
+	left: -25px;
+	display: block;
+}
+.customcheckbox input[type=checkbox] + span {
+	margin: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #B4B3B3;
+	display: block;
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background-image: -webkit-linear-gradient(270deg,rgba(232,232,232,1.00) 0%,rgba(199,199,199,1.00) 100%);
+	background-image: linear-gradient(180deg,rgba(232,232,232,1.00) 0%,rgba(199,199,199,1.00) 100%);
+}
+.customcheckbox input[type=checkbox] + span label {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	padding-left: 25px;
+	color: #4BAE6B;
+	font-weight: bold;
+}
+.customcheckbox input[type=checkbox] + span label:before {
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	content: "";
+	width: 20px;
+	height: 20px;
+	background-image: url(checkbox.png);
+	background-repeat: no-repeat;
+}
+.customcheckbox input[type=checkbox] + span:hover {
+	border-color: #9d0d15;
+}
+.customcheckbox input[type=checkbox] + span:hover label {
+	color: #9d0d15;
+}
+.customcheckbox input[type=checkbox] + span:hover label:before {
+	background-position: 0px -20px;
+}
+.customcheckbox input[type=checkbox]:checked + span {
+	border-color: #9d0d15;
+}
+.customcheckbox input[type=checkbox]:checked + span label {
+	color: #9d0d15;
+}
+.customcheckbox input[type=checkbox]:checked + span label:before {
+	background-position: 0px -40px;
+}
+
 </style>
 </head>
 
 <body>
 <p>Quelles pommes préférez-vous ?</p>
-<div><input type="checkbox" name="checkbox" id="checkbox">
+<div class="customcheckbox"><input type="checkbox" name="checkbox" id="checkbox">
 <span><label for="checkbox">rouges </label></span></div>
-<div><input type="checkbox" name="checkbox1" id="checkbox1">
+<div class="customcheckbox"><input type="checkbox" name="checkbox1" id="checkbox1">
 <span><label for="checkbox1">vertes </label></span></div>
-<div><input type="checkbox" name="checkbox1" id="checkbox1">
-<span><label for="checkbox1">jaunes </label></span></div>
+<div class="customcheckbox"><input type="checkbox" name="checkbox2" id="checkbox2">
+<span><label for="checkbox2">jaunes </label></span></div>
 </body>
 </html>
